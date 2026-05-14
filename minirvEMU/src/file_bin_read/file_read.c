@@ -16,7 +16,7 @@ uint32_t load_file_to_rom (uint8_t **mem, char *path)
     uint32_t file_size = ftell(fp);
     fseek(fp,0,SEEK_SET);
 
-    // 分配一个可寻址24位大小内存空间
+    // 分配一个可寻址30位大小内存空间
     *mem = malloc(mem_size);
     check(*mem != NULL, "Failed to allocate memory for ROM.");
 
